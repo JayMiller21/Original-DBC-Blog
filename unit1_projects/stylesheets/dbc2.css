@@ -1,0 +1,77 @@
+/*Format your header, content, sidebar, and footer
+Add padding, borders, and margins
+Center your content area in the browser
+Add width and height to divs and give them ids
+Psuedo-classes for links
+Positioning
+A div that contains an image and a caption, and position the caption absolutely overtop the image.
+Float side bar and content area*/
+
+#container {
+	width: 900px;
+	border-left: 3px solid #000000;
+	border-right: 3px solid #000000;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header {
+	width: 900px;
+	height: 100px;
+	max-width: 900px;
+	background-color: #ffaaaa;
+	text-align: center;
+	border-top: 3px solid #000000;
+	border-bottom: 3px solid #000000;
+	z-index: 0;
+}
+
+#middle {
+	height: 600px;
+}
+
+#sidebar {
+	width: 185px;
+	height: 600px;
+	float: left;
+	background-color: #aaffff;
+	z-index: 0;
+	padding-left: 15px;
+	overflow: auto;
+}
+
+#contentarea {
+	width: 685px;
+	height: 600px;
+	float: right;
+	background-color: #ffffaa;
+	z-index: 0;
+	padding-left: 15px;
+	overflow: auto;
+}
+
+#footer {
+	width: 900px;
+	height: 50px;
+	max-width: 900px;
+	background-color: #ffaaaa;
+	text-align: center;
+	border-top: 3px solid #000000;
+	border-bottom: 3px solid #000000;
+	position: absolute; top: 706px;
+	z-index: 0;
+}
+
+a:hover {
+	font: italic;
+}
+
+.behindtext {
+	z-index: -500;
+}
+
+caption {
+	z-index: 500;
+	position: relative; left: 50px;
+}
