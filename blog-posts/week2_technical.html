@@ -1,0 +1,62 @@
+<!-- Why is this one of your favorite sites?
+What area of the site is your eye drawn to when looking at the homepage? Stand back further, what area is your eye drawn to now? Is that area the most important area of the site?
+How would you describe the website visually? List 5 adjectives. (i.e. "pretty", "elegant", "simple", "dark", "cluttered", "basic" etc)
+What problem does this website solve? What content does it have?
+What 5 adjectives would you use to describe the content, focus, and purpose of the site? (i.e. "practical", "fun", "whimsical", "silly", "serious" etc) How does that compare to the adjectives you used to describe the site visually?
+How easy is it to find what you are looking for from the homepage? How about from another page?
+How easy is it to browse through all the content of the site?
+How do you feel after being on the site for a while? (i.e. "bored", "happy", "anxious or hyper", "like I wasted a lot of time" etc)
+Does the site sell anything? If so, have you purchased any of it? Why or why not? -->
+
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="stylesheets/blogstyle.css" />
+<html>
+<head>
+	<title>Week 2 Technical</title>
+	<style type="text/css">
+		img {
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<header>
+		<h1><a href="index.html">Jenn's Blog</a></h1>
+	</header>
+	<section>
+		<h1 class="center">Week 2 Technical</h1>
+		<span class="center">
+			<p><em>In this post, I'll introduce each of the possible values for the CSS "position" property, and explain what they mean. CSS position can be assigned any of the following values: Static, relative, fixed, or absolute.</em></p>
+		</span>
+		<article>
+			<h3>Static</h3>
+			<p>"Static" is the default value the the CSS "position" property. So when you do not explicitly apply the "position" property, static positioning is automatically applied. This positioning causes elements to appear on the page in the order they appear in the html document. For inline elements, like span, elements will display inline, starting at the top left of the container with the first html element. Block elements, like div, will be positioned on the next available line. In the following example, two spans and a div are statically positioned. Notice that position is not specified for the second span, but it is automatically positioned statically.</p>
+			<img src="images/static_position_code.png" alt="Example code for static CSS position">
+			<img src="images/static_position_visual.png" alt="Example illustration of static CSS position">
+		</article>
+		<article>
+			<h3>Relative</h3>
+			<p>"Relative" positioning positions the element is relative to its normal position. Take for example the first span in a container: If no position is specified, it will sit squarely at the top left of the container. Using relative positioning, I can cause the span to appear a specified distance left, right, up, or down from its default, or static, position. In the example below, the first element from the "static" example is positioned relatively, 10 pixels from the left, and 50 pixels from the top.</p>
+			<img src="images/relative_position_code.png" alt="Example code for relative CSS position">
+			<img src="images/relative_position_visual.png" alt="Example illustration of relative CSS position">
+		</article>
+		<article>
+			<h3>Fixed</h3>
+			<p>A "Fixed" position element is positioned relative to the browser window, or viewport. Even when the page scrolls, a fixed element will stay in place. Position can be specified in relation to the left, right, top, or bottom of the viewport. In the following example, our first span element has a fixed position 0 pixels from both the top and left of the viewport. The second span element has a fixed position: 10 pixels from the left side of the browser window, and 50 pixels from the top of the window. Notice the difference between this example the relative example: In the relative example, there were 10 pixels between the container's inner left border and the span element. In this example, the span sits right up against the container's inner left border. This is because the container border is 10 pixels wide and sits against the left side of the screen, and the span element begins 10 pixels from the left side of the screen.</p>
+			<img src="images/fixed_position_code.png" alt="Example code for fixed CSS position">
+			<img src="images/fixed_position_visual.png" alt="Example illustration of fixed CSS position">
+		</article>
+		<article>
+			<h3>Absolute</h3>
+			<p>Just as fixed position elements are positioned in relation to the viewport's left, right, top, or bottom boundaries, an element with absolute positioning is positioned in relation to the boundaries of its first explicitly positioned (relative or absolute) ancestor element. In the absence of a positioned ancestor, positioning will be in relation to the html element. In the following example, a span is positioned absolutely within a relatively positioned container: 10 pixels from the right, and 50 pixels from the top. As shown, an absolutely positioned element does not affect the positioning of other elements in the same container. Notice how the text in the p tag flows behind the absolutely positioned span, uninterrupted.</p>
+			<img src="images/absolute_position_code.png" alt="Example code for absolute CSS position">
+			<img src="images/absolute_position_visual.png" alt="Example illustration of absolute CSS position">
+		</article>
+	</section>
+	<footer>
+		<p>Say hi at <a href="mailto:jennifer.a.miller2@gmail.com"><strong>jennifer.a.miller2@gmail.com</strong></a>!</p>
+	</footer>
+</div>
+</body>
+</html>
