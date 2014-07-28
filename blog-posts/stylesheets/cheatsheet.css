@@ -1,79 +1,86 @@
-html { 
+html {
 	width: 900px;
 	text-align: justify;
 	font-family: sans-serif;
-} 
+}
 
-body { 
-	
-} 
+body {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 /*******************************************************************
 LAYOUT
 *******************************************************************/
 
-article { 
+article {
 
-} 
+}
 
-div { 
+div {
 
-} 
+}
 
-#summary { 
+#summary {
 
-} 
+}
 
-#content { 
+#content {
 
-} 
+}
 
-section { 
+section {
 
-} 
+}
 
-header { 
+header {
 	/*background-color: lightgreen;*/
 	border-bottom: 3px solid black;
-} 
+}
 
-nav { 
+nav {
 
-} 
+}
 
-#table_of_contents { 
-
-} 
+#table_of_contents {
+	border: 1px solid black;
+	float: left;
+	margin-right: 30px;
+	margin-top: 15px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
 
 
 /*******************************************************************
 TYPOGRAPHY
 *******************************************************************/
 
-h1 { 
+h1 {
 
-} 
+}
 
-h2 { 
+h2 {
 
-} 
+}
 
-h3 { 
+h3 {
 
-} 
+}
 
-h4 { 
+h4 {
 
-} 
+}
 
-p { 
+p {
 
-} 
+}
 
-code { 
+code {
 	background-color: lightgray
-} 
+}
 
 
 /*******************************************************************
@@ -84,18 +91,18 @@ LISTS
 
 ol li {
 	display:block;
-} 
- 
+}
+
 /* reset counter */
 ol > li:first-child {
 	counter-reset: item;
 }
- 
+
 /* increment counter */
 ol > li {
 	counter-increment: item;
 }
- 
+
 /* print counter */
 ol > li:before {
 content:counters(item, ".") ". "; font-weight:bold;

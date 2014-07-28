@@ -32,18 +32,18 @@
         </li>
         <li><a href="#Array">Array</a>
           <ol>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#slice">Array#slice(index</a></li>
+            <li><a href="#slice2">Array#slice(start,length)</a></li>
+            <li><a href="#slice3">Array#slice(range)</a></li>
+            <li><a href="#push">Array#push(item)</a></li>
+            <li><a href="#pop">Array#pop</a></li>
           </ol>
         </li>
-        <li><a href="#Hash">Hash</a>
+        <li><a href="#hash">Hash</a>
           <ol>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#values">Accessing Values</a></li>
+            <li><a href="#hash_symbols">Accessing Values with Symbols for keys</a></li>
+            <li><a href="#hash_each">Hash#each {|key,value| block}</a></li>
           </ol>
         </li>
       </ol>
@@ -108,99 +108,62 @@
         </article>
       </section>
       <section>
-        <h3 id="">Array</h3>
-        <p></p>
+        <h3 id="array">Array</h3>
+        <p>An array is an ordered collection of elements that can be of any type. These elements are assigned a numeric position in the array that relates to their order. The first item in every array starts off with an index of 0 and each subsequent item's index is increased by 1.</p>
         <article>
-          <h4 id=""></h4>
-          <p></p>
-          <code></code>
+          <h4 id="slice">Array#slice(index)</h4>
+          <p>Or more commonly seen as Array[index], this will retrieve the element of an array that is in that position.</p>
+          <code>sweet_stuff = ["tree","flower","fauna","river","bridge"]<br>
+        sweet_stuff[2] => "fauna"<br>
+        sweet_stuff.slice(2) => "fauna"</code>
         </article>
         <article>
-          <h4 id=""></h4>
-          <p></p>
-          <code></code>
+          <h4 id="slice2">Array#slice(start,length)</h4>
+          <p>You can also give it a starting index, along with a number of subsequent elements to retrieve.</p>
+          <code>sweet_stuff[1,3] => ["flower","fauna","river"]</code>
         </article>
         <article>
-          <h4 id=""></h4>
-          <p></p>
-          <code></code>
+          <h4 id="slice3">Array#slice(range)</h4>
+          <p>Lastly, you can pass in a range of indicies and it will return that.</p>
+          <code>sweet_stuff[1..3] => ["flower","fauna","river"]</code>
         </article>
         <article>
-          <h4 id=""></h4>
-          <p></p>
-          <code></code>
+          <h4 id="push">Array#push(item)</h4>
+          <p>Push will insert an item as the last element of a given array.</p>
+          <code>test = [1,2,3,4]<br>
+        test.push(5) => [1,2,3,4,5]</code>
+        </article>
+        <article>
+          <h4 id="pop">Array#pop</h4>
+          <p>The opposite of push, pop will remove the last item from a given array and return it. It is also important to know that pop modifies the existing object.</p>
+          <code>test = [1,2,3,4]<br>
+        test.pop => 4<br>
+        test = [1,2,3]</code>
         </article>
       </section>
       <section>
-        <h3 id="">Hash</h3>
-        <p></p>
+        <h3 id="hash">Hash</h3>
+        <p>A hash is collection of unordered key value pairs. In a nutshell, instead of using a regular array, a hash function maps various keys, which for the most part are human-readable alphanumeric strings, and connect them to indexs of an array. As it turns out, it is much quicker to see if a given key exists, versus having to check each item of the array to see if the desired item exists in there. As a result, hashes tend to be way way quicker for searching purposes than regualr arrays.</p>
         <article>
-          <h4 id=""></h4>
-          <p></p>
-          <code></code>
+          <h4 id="values">Accessing Values</h4>
+          <p>You can get access to the values in a has similar to how you would from an array, execept you refer to the corresponding key as opposed to the index.</p>
+          <code>test_hash = {"name" => "Bob", "hobby" => "basketball"}<br>
+  test_hash["name"] => "Bob"</code>
         </article>
         <article>
-          <h4 id=""></h4>
-          <p></p>
-          <code></code>
+          <h4 id="values_symbols">How to access values with symbols for keys</h4>
+          <p>With this synatx, keys are implicitly turned into symbols.</p>
+          <code>sym_hash = {name: "Bob", hobby: "basketball"}<br>
+  sym_hash[:name] => "Bob"</code>
         </article>
         <article>
-          <h4 id=""></h4>
-          <p></p>
-          <code></code>
-        </article>
-        <article>
-          <h4 id=""></h4>
-          <p></p>
-          <code></code>
+          <h4 id="hash_each">Hash#each {|key,value| block}</h4>
+          <p>Will iterate through each key,value pair of the hash and perform whatever code block is passed to it.</p>
+          <code>test_hash = {"name" => "Mike",  "age" => "23", "city" => "Brooklyn"}<br>
+      test_hash.each {|key, value| puts key + " " + value} => "name Mike", "\n","age 23", "\n", "city Brooklyn</code>
         </article>
       </section>
     </div>
+    <br><br><br><br><br>
   </body>
 </html>
-
-
-<!-- Arrays
-  Summary: An ordered collection of elements that can be of any type. These elements are assigned a numeric position in the array that relates to their order. The first item in every array starts off with an index of 0 and each subsequent item's index is increased by 1.
-  Things you can do with/to arrays:
-    Array#slice(index): Or more commonly seen as Array[index], this will retrieve the element of an array that is in that position.
-      EX:
-        sweet_stuff = ["tree","flower","fauna","river","bridge"]
-        sweet_stuff[2] => "fauna"
-        sweet_stuff.slice(2) => "fauna"
-    Array#slice(start,length): You can also give it a starting index, along with a number of subsequent elements to retrieve.
-      EX:
-        sweet_stuff[1,3] => ["flower","fauna","river"]
-
-    Array#slice(range): Lastly, you can pass in a range of indiciesand it will return that
-      EX:
-        sweet_stuff[1..3] => ["flower","fauna","river"]
-
-    Array#push(item): Push will insert an item as the last element of a given array.
-      EX:
-        test = [1,2,3,4]
-        test.push(5) => [1,2,3,4,5]
-
-    Array#pop : The opposite of push, pop will remove the last item from a given array and return it. It is also important to know that pop modifies the existing object.
-      EX:
-        test = [1,2,3,4]
-        test.pop => 4
-        test = [1,2,3]
-
-
-
-Hashes
-  Summary: A hash is collection of unordered key value pairs.
-
-  Accessing values
-  test_hash = {"name" => "Bob", "hobby" => "basketball"}
-  test_hash["name"] => "Bob"
-
-  Alternative syntax for symbol keys:  With this synatx, keys are implicitly turned into symbols.
-  sym_hash = {name: "Bob", hobby: "basketball"}
-  sym_hash[:name] => "Bob"
-
-  Hash#each {|key,value| block}: Will iterate through each key,value pair of the hash and perform whatever code block is passed to it.
-    EX:
-      test_hash = {"name" => "Mike",  "age" => "23", "city" => "Brooklyn"}
-      test_hash.each {|key, value| puts key + " " + value} -->
