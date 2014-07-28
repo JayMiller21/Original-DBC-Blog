@@ -1,0 +1,102 @@
+html { 
+	width: 900px;
+	text-align: justify;
+	font-family: sans-serif;
+} 
+
+body { 
+	
+} 
+
+
+/*******************************************************************
+LAYOUT
+*******************************************************************/
+
+article { 
+
+} 
+
+div { 
+
+} 
+
+#summary { 
+
+} 
+
+#content { 
+
+} 
+
+section { 
+
+} 
+
+header { 
+	/*background-color: lightgreen;*/
+	border-bottom: 3px solid black;
+} 
+
+nav { 
+
+} 
+
+#table_of_contents { 
+
+} 
+
+
+/*******************************************************************
+TYPOGRAPHY
+*******************************************************************/
+
+h1 { 
+
+} 
+
+h2 { 
+
+} 
+
+h3 { 
+
+} 
+
+h4 { 
+
+} 
+
+p { 
+
+} 
+
+code { 
+	background-color: lightgray
+} 
+
+
+/*******************************************************************
+LISTS
+*******************************************************************/
+
+/*The following is from http://stackoverflow.com/questions/7791071/is-it-possible-to-create-multi-level-ordered-list-in-html*/
+
+ol li {
+	display:block;
+} 
+ 
+/* reset counter */
+ol > li:first-child {
+	counter-reset: item;
+}
+ 
+/* increment counter */
+ol > li {
+	counter-increment: item;
+}
+ 
+/* print counter */
+ol > li:before {
+content:counters(item, ".") ". "; font-weight:bold;
+}

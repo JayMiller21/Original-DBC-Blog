@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Unit 3 Cheatsheet!</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/cheatsheet.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ruby Data Types Cheat Sheet</h1>
+    </header>
+    <div id="summary"></div>
+    <nav id="table_of_contents">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#String">String</a>
+          <ol>
+            <li><a href="#String#print">String#print</a></li>
+            <li><a href="#String#puts">String#puts</a></li>
+            <li><a href="#String#concat">String#concat</a></li>
+            <li><a href="#String#ord">String#ord</a></li>
+            <li><a href="#String#to_sym">String#to_sym</a></li>
+          </ol>
+        </li>
+        <li><a href="#Integer">Integer</a>
+          <ol>
+            <li><a href="#Integer#to_s">Integer#to_s</a></li>
+            <li><a href="#Integer#chr">Integer#chr</a></li>
+            <li><a href="#Mathematical Operations (+, -, *, /)">Mathematical Operations (+, -, *, /)</a></li>
+            <li><a href="#Modulus (%)">Modulus (%)</a></li>
+          </ol>
+        </li>
+        <li><a href="#Array">Array</a>
+          <ol>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ol>
+        </li>
+        <li><a href="#Hash">Hash</a>
+          <ol>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ol>
+        </li>
+      </ol>
+    </nav>
+    <div id="content">
+      <!-- (section>(h3+p+(article>(h4+p+code))*4))*4 -->
+      <section>
+        <h3 id="String">String</h3>
+        <p>A string is a chain of characters that usually forms human readable words surrounded by either single or double quotes. A string can be empty, which would just be a pair of double/single quotes and no character inside. String manipulation is an important part of computer science, and there are a number of methods in Ruby that can be used on String class. These include but are not limited to the following.</p>
+        <article>
+          <h4 id="String#print">String#print</h4>
+          <p>Outputs the string to the console</p>
+          <code>puts "Howdy partner!" => "Howdy partner!"</code>
+        </article>
+        <article>
+          <h4 id="String#puts">String#puts</h4>
+          <p>Outputs the string to the console followed by a line break.</p>
+          <code>puts "Howdy partner!" => "Howdy partner!"</br> #new line</code>
+        </article>
+        <article>
+          <h4 id="String#concat">String#concat</h4>
+          <p>string1.concat(string2) appends string2 to the end of string1</p>
+          <code>"good ".concat("times") => "good times"</code>
+          <p>Alternatively, the '+' or '<<' also will perform a similar function and may even give you a slight performance boost!</p>
+          <code>"good " + "times" => "good times"</br>"good " << "times" => "good times"</code>
+        </article>
+        <article>
+          <h4 id="String#ord">String#ord</h4>
+          <p>When performed on a single character, returns that character's ASCII value. When performed on a multi-character string, returns the ASCII value of the first letter in the string.</p>
+          <code>"a".ord => 97</br>"apple".ord => 97</code>
+        </article>
+        <article>
+          <h4 id="String#to_sym">String#to_sym</h4>
+          <p>Returns a symbol object that cooresponds to the original string.</p>
+          <code>"coolbeans".to_sym => :coolbeans</code>
+          <p>For a string with spaces, the symbol name will be in quotes.</p>
+          <code>"cool beans".to_sym => :"cool beans"</code>
+          <p>Symbols are very similar to strings, execept that they cannot be changed once they are created.</p>
+          <code>foo = "fighters".to_sym</br>foo + " rool!" => Throws an Undefined Method Error</code>
+        </article>
+      </section>
+      <section>
+        <h3 id="Integer">Integer</h3>
+        <p>Integers are values that are represented rounded down to the nearest whole number. The following are some of Integer's most common methods.</p>
+        <article>
+          <h4 id="Integer#to_s">Integer#to_s</h4>
+          <p>Turns an integer into a string containing the digits as a corresponding series of characters.</p>
+          <code>963.to_s => "963"</code>
+        </article>
+        <article>
+          <h4 id="Integer#chr">Integer#chr</h4>
+          <p>Returns the cooresponding character for the ASCII value.</p>
+          <code>97.chr => "a"</code>
+        </article>
+        <article>
+          <h4 id="Mathematical Operations (+, -, *, /)">Mathematical Operations (+, -, *, /)</h4>
+          <p>Preform the specified mathemaitical function. Return integers for operations involving only integers. Return floats for operations involving one or more floats.</p>
+          <code>1 + 2 => 3</br>1.0 + 2 => 3.0</br>5 - 2 => 3</br>5.0 - 2 => 3.0</br>1 * 2 => 3</br>1.0 * 2 => 3.0</br>5/2 => 2</br>5.0/2 => 2.5</code>
+          <h4 id="Modulus (%)">Modulus (%)</h4>
+          <p>The modulus operator returns the remainder of dividing one integer by another.</p>
+          <code>5 % 2 => 1</code>
+        </article>
+      </section>
+      <section>
+        <h3 id="">Array</h3>
+        <p></p>
+        <article>
+          <h4 id=""></h4>
+          <p></p>
+          <code></code>
+        </article>
+        <article>
+          <h4 id=""></h4>
+          <p></p>
+          <code></code>
+        </article>
+        <article>
+          <h4 id=""></h4>
+          <p></p>
+          <code></code>
+        </article>
+        <article>
+          <h4 id=""></h4>
+          <p></p>
+          <code></code>
+        </article>
+      </section>
+      <section>
+        <h3 id="">Hash</h3>
+        <p></p>
+        <article>
+          <h4 id=""></h4>
+          <p></p>
+          <code></code>
+        </article>
+        <article>
+          <h4 id=""></h4>
+          <p></p>
+          <code></code>
+        </article>
+        <article>
+          <h4 id=""></h4>
+          <p></p>
+          <code></code>
+        </article>
+        <article>
+          <h4 id=""></h4>
+          <p></p>
+          <code></code>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
+
+
+<!-- Arrays
+  Summary: An ordered collection of elements that can be of any type. These elements are assigned a numeric position in the array that relates to their order. The first item in every array starts off with an index of 0 and each subsequent item's index is increased by 1.
+  Things you can do with/to arrays:
+    Array#slice(index): Or more commonly seen as Array[index], this will retrieve the element of an array that is in that position.
+      EX:
+        sweet_stuff = ["tree","flower","fauna","river","bridge"]
+        sweet_stuff[2] => "fauna"
+        sweet_stuff.slice(2) => "fauna"
+    Array#slice(start,length): You can also give it a starting index, along with a number of subsequent elements to retrieve.
+      EX:
+        sweet_stuff[1,3] => ["flower","fauna","river"]
+
+    Array#slice(range): Lastly, you can pass in a range of indiciesand it will return that
+      EX:
+        sweet_stuff[1..3] => ["flower","fauna","river"]
+
+    Array#push(item): Push will insert an item as the last element of a given array.
+      EX:
+        test = [1,2,3,4]
+        test.push(5) => [1,2,3,4,5]
+
+    Array#pop : The opposite of push, pop will remove the last item from a given array and return it. It is also important to know that pop modifies the existing object.
+      EX:
+        test = [1,2,3,4]
+        test.pop => 4
+        test = [1,2,3]
+
+
+
+Hashes
+  Summary: A hash is collection of unordered key value pairs.
+
+  Accessing values
+  test_hash = {"name" => "Bob", "hobby" => "basketball"}
+  test_hash["name"] => "Bob"
+
+  Alternative syntax for symbol keys:  With this synatx, keys are implicitly turned into symbols.
+  sym_hash = {name: "Bob", hobby: "basketball"}
+  sym_hash[:name] => "Bob"
+
+  Hash#each {|key,value| block}: Will iterate through each key,value pair of the hash and perform whatever code block is passed to it.
+    EX:
+      test_hash = {"name" => "Mike",  "age" => "23", "city" => "Brooklyn"}
+      test_hash.each {|key, value| puts key + " " + value} -->
